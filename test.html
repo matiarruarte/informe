@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <!-- Codificación UTF-8 para que se vean bien los acentos -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Country Map Example</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+  <!-- Estilos personalizados -->
+  <style>
+    html, body {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+      box-sizing: border-box;
+    }
+    /* Contenedor principal para empujar el footer */
+#page-container {
+  min-height: 100vh; /* toda la altura de la ventana */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Contenido principal que ocupa el espacio restante */
+#content-wrap {
+  flex: 1;
+}
+
+/* Footer fijo al final */
+footer {
+  /* opcional: agregar estilos para que se vea bien */
+  padding: 1rem 0;
+}
+  </style>
+
+  <!-- Scripts de mapa -->
+  <script src="mapdata.js"></script>
+  <script src="countrymap.js"></script>
+  <script src="custom.js" defer></script>
+</head>
+  <body>
+<div class="container">
+      <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-center ">
+        <div class="col-md-3 mb-2 mb-md-0">
+          <a href="/" class="d-inline-flex link-body-emphasis text-decoration-none justify-content-center align-items-center">
+            <img src="map_images/logo_footer.png " alt="Logo" width="100">
+          </a>
+        </div>
+        
+        <h1 class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">INFORME SALUD</h1>
+        <div class="container">
+    <div class="d-flex flex-wrap justify-content-between align-items-center py-3 my-10 border-top">
+    </div></div>
+      </header>
+    </div>
+
+
+
+
+    <div class="row mb-3 text-center">
+        <div class="col-md-2 themed-grid-col"> 
+          <nav class="navbar navbar-light " aria-label="Primer ejemplo de barra de navegación">
+      <div class="container-fluid align-items-center justify-content-center justify-content-md-center">
+        <a class="navbar-brand" href="#"></a>
+        <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample01" aria-controls="navbarsExample01" aria-expanded="false" aria-label="Alternar navegación">
+          <span>Seleccionar Area</span>
+        </button>
+
+<div class="navbar-collapse collapse" id="navbarsExample01">
+  <ul class="navbar-nav me-auto mb-2">
+    <li class="nav-item"><a class="nav-link" href="#" data-province="ARB">Buenos Aires</a></li>
+    <li class="nav-item"><a class="nav-link" href="#" data-province="ARC">CABA</a></li>
+    <li class="nav-item"><a class="nav-link" href="#" data-province="ARK">Catamarca</a></li>
+    <li class="nav-item"><a class="nav-link" href="#" data-province="ARH">Chaco</a></li>
+    <li class="nav-item"><a class="nav-link" href="#" data-province="ARU">Chubut</a></li>
+    <li class="nav-item"><a class="nav-link" href="#" data-province="ARX">Córdoba</a></li>
+    <li class="nav-item"><a class="nav-link" href="#" data-province="ARW">Corrientes</a></li>
+    <li class="nav-item"><a class="nav-link" href="#" data-province="ARE">Entre Ríos</a></li>
+    <li class="nav-item"><a class="nav-link" href="#" data-province="ARP">Formosa</a></li>
+    <li class="nav-item"><a class="nav-link" href="#" data-province="ARY">Jujuy</a></li>
+    <li class="nav-item"><a class="nav-link" href="#" data-province="ARL">La Pampa</a></li>
+    <li class="nav-item"><a class="nav-link" href="#" data-province="ARF">La Rioja</a></li>
+    <li class="nav-item"><a class="nav-link" href="#" data-province="ARM">Mendoza</a></li>
+    <li class="nav-item"><a class="nav-link" href="#" data-province="ARN">Misiones</a></li>
+    <li class="nav-item"><a class="nav-link" href="#" data-province="ARQ">Neuquén</a></li>
+    <li class="nav-item"><a class="nav-link" href="#" data-province="ARR">Río Negro</a></li>
+    <li class="nav-item"><a class="nav-link" href="#" data-province="ARA">Salta</a></li>
+    <li class="nav-item"><a class="nav-link" href="#" data-province="ARJ">San Juan</a></li>
+    <li class="nav-item"><a class="nav-link" href="#" data-province="ARD">San Luis</a></li>
+    <li class="nav-item"><a class="nav-link" href="#" data-province="ARZ">Santa Cruz</a></li>
+    <li class="nav-item"><a class="nav-link" href="#" data-province="ARS">Santa Fe</a></li>
+    <li class="nav-item"><a class="nav-link" href="#" data-province="ARG">Santiago del Estero</a></li>
+    <li class="nav-item"><a class="nav-link" href="#" data-province="ARV">Tierra del Fuego</a></li>
+    <li class="nav-item"><a class="nav-link" href="#" data-province="ART">Tucumán</a></li>
+  </ul>
+</div>
+
+
+      </div>
+    </nav>
+          
+        </div>
+        <div class="col-md-4 themed-grid-col d-flex justify-content-center"><div id="map" style="width: 100%; max-width: 600px;"></div></div>
+
+        <div id="info-province" class="col-md-6 themed-grid-col"></div>
+
+    </div>
+
+
+
+
+
+
+
+   
+    <div class="container">
+     <footer class="d-flex flex-wrap justify-content-center align-items-center py-3 my-4 border-top">
+      <div class="col-md-4 d-flex align-items-center">
+        <a href="/" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
+          <svg class="bi" width="30" height="24">
+            <use xlink:href="#bootstrap"></use>
+          </svg>
+        </a>
+        <span class="mb-3 mb-md-0 text-body-secondary">
+          Powered by <a href="http://simplemaps.com/custom/country/Dy2IdfC8" target="_blank" rel="noopener noreferrer">Simplemaps</a>
+        </span>
+      </div>
+    </footer>
+  </div>
+  </div>
+  
+    
+    
+  
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>
+      
+    
+

@@ -98,7 +98,7 @@ const infoProvincias = {
   </h2>
   <div id="collapseARB3" class="accordion-collapse collapse">
     <div class="accordion-body">
-      Haga click en uno de ellos para desplegar la información.
+      
       <div class="accordion mt-3" id="subAccordionARB3">
         <div class="accordion-item">
           <h2 class="accordion-header" id="subHeadingARB3-1">
@@ -108,7 +108,7 @@ const infoProvincias = {
           </h2>
           <div id="subCollapseARB3-1" class="accordion-collapse collapse">
             <div class="accordion-body">
-              Producción agroindustrial y gran actividad portuaria.
+              Información
             </div>
           </div>
         </div>
@@ -124,7 +124,7 @@ const infoProvincias = {
           </h2>
           <div id="subCollapseARB3-1" class="accordion-collapse collapse">
             <div class="accordion-body">
-              Producción agroindustrial y gran actividad portuaria.
+              Información
             </div>
           </div>
         </div>
@@ -138,7 +138,7 @@ const infoProvincias = {
           </h2>
           <div id="subCollapseARB3-1" class="accordion-collapse collapse">
             <div class="accordion-body">
-              Producción agroindustrial y gran actividad portuaria.
+              Información
             </div>
           </div>
         </div>
@@ -174,17 +174,17 @@ const infoProvincias = {
         </h2>
         <div id="collapseARC" class="accordion-collapse collapse" data-bs-parent="#accordionProvinciasARC">
           <div class="accordion-body">
-            Capital del país y centro político, financiero y cultural.
+            
             <div class="accordion mt-3" id="subAccordionARC">
               <div class="accordion-item">
                 <h2 class="accordion-header" id="subHeadingARC1">
                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#subCollapseARC1">
-                    Cultura
+                    Hospital X
                   </button>
                 </h2>
                 <div id="subCollapseARC1" class="accordion-collapse collapse" data-bs-parent="#subAccordionARC">
                   <div class="accordion-body">
-                    Museos, teatros, librerías y oferta cultural vibrante.
+                    Info 2
                   </div>
                 </div>
               </div>
